@@ -1,0 +1,6 @@
+.cart-text text {
+  font-size: 10rpx;
+}
+.cart-text .de {
+  color: red;
+}

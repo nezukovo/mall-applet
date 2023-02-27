@@ -1,0 +1,55 @@
+.category-box {
+  height: 100%;
+}
+.category-box .category-content {
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+.category-box .category-content .left-menu {
+  flex: 2;
+}
+.category-box .category-content .left-menu .menu-item {
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 80rpx;
+}
+.category-box .category-content .left-menu .active {
+  font-weight: bolder;
+  color: var(--themeColor);
+  border-left: 8rpx solid currentColor;
+}
+.category-box .category-content .right-content {
+  flex: 5;
+}
+.category-box .category-content .right-content .product-type {
+  padding: 30rpx 20rpx 30rpx 20rpx;
+}
+.category-box .category-content .right-content .product-type .product-title {
+  font-weight: bolder;
+}
+.category-box .category-content .right-content .product-type .product-list navigator {
+  margin: 10rpx;
+  display: flex;
+  background-color: #f8f8f8;
+}
+.category-box .category-content .right-content .product-type .product-list navigator image {
+  flex: 2;
+}
+.category-box .category-content .right-content .product-type .product-list navigator .right {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.category-box .category-content .right-content .product-type .product-list navigator .right .product-name {
+  padding-top: 10rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.category-box .category-content .right-content .product-type .product-list navigator .right .product-price {
+  padding-bottom: 10rpx;
+}

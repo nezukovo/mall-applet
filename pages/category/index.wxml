@@ -1,0 +1,44 @@
+<!--pages/category/index.wxml-->
+<view class="category-box">
+  <!-- 搜索栏 -->
+  <SearchBar />
+  <!-- 分类列表 -->
+  <view class="category-content">
+    <!-- 左侧菜单 -->
+    <scroll-view scroll-y class="left-menu">
+      <view class="menu-item {{index == 0 ? 'active' : null}}" wx:for="{{leftMenu}}" wx:for-item="item" wx:key="*this" data-index="{{index}}">
+        <!--*this指向自身内容-->
+        {{item}}
+      </view>
+    </scroll-view>
+    <!-- 右侧类型 -->
+    <scroll-view scroll-y class="right-content">
+      <view class="product-type" wx:for="{{rightContent}}" wx:for-item="item" wx:key="id">
+        <view class="product-title">
+          {{item.name}}
+        </view>
+        <!-- 二层循环需要嵌套进去 -->
+        <view class="product-list" wx:for="{{item.productList}}" wx:for-item="product" wx:key="id">
+          <navigator url="">
+            <image src="{{baseUrl+'/image/product/'+product.proPic}}" mode="widthFix"></image>
+
+            <view class="right">
+              <view class="product-name">
+                {{product.name}}
+              </view>
+              <view class="product-price">
+                ￥{{product.price}}
+              </view>
+            </view>
+
+          </navigator>
+          {{product.name}}
+
+        </view>
+      </view>
+
+    </scroll-view>
+  </view>
+
+
+</view>
