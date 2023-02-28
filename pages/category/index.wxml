@@ -5,14 +5,14 @@
   <!-- 分类列表 -->
   <view class="category-content">
     <!-- 左侧菜单 -->
-    <scroll-view scroll-y class="left-menu">
-      <view class="menu-item {{index == 0 ? 'active' : null}}" wx:for="{{leftMenu}}" wx:for-item="item" wx:key="*this" data-index="{{index}}">
+    <scroll-view scroll-y class="left-menu" >
+      <view class="menu-item {{index == currentIndex ? 'active' : null}}" wx:for="{{leftMenu}}" wx:for-item="item" wx:key="*this" data-index="{{index}}" bindtap="handleMenuChange">
         <!--*this指向自身内容-->
         {{item}}
       </view>
     </scroll-view>
     <!-- 右侧类型 -->
-    <scroll-view scroll-y class="right-content">
+    <scroll-view scroll-y class="right-content" scroll-top="{{scrollTop}}">
       <view class="product-type" wx:for="{{rightContent}}" wx:for-item="item" wx:key="id">
         <view class="product-title">
           {{item.name}}

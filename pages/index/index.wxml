@@ -16,13 +16,20 @@
 <!-- 商品大类 -->
   <view class="bigtype-box">
     <view class="bigTypeRow">
-      <navigator wx:for="{{bigTypeList_row1}}" wx:for-item="item" wx:key="id">
+      <navigator 
+          data-index="{{index}}" 
+          bindtap="handleTypeJump"
+      wx:for="{{bigTypeList_row1}}" wx:for-item="item" wx:key="id">
         <image mode="widthFix" src="{{baseUrl+'/image/bittype/'+item.image}}">
         </image>
       </navigator>
     </view>
     <view class="bigTypeRow">
-      <navigator wx:for="{{bigTypeList_row2}}" wx:for-item="item" wx:key="id">
+    <!--两行 index相同 + 5-->
+      <navigator  
+        data-index="{{index + 5}}"
+        bindtap="handleTypeJump"
+      wx:for="{{bigTypeList_row2}}" wx:for-item="item" wx:key="id">
         <image mode="widthFix" src="{{baseUrl+'/image/bittype/'+item.image}}">
         </image>
       </navigator>
@@ -35,7 +42,12 @@
     </view>
     <view class="product-list">
       <view class="product-detail" >
-        <navigator url="" wx:for="{{hotProductList}}" wx:for-item="item" wx:key="id">
+        <navigator 
+          
+          wx:for="{{hotProductList}}" 
+          wx:for-item="item" 
+          wx:key="id"
+          >
           <image src="{{baseUrl+'/image/product/'+item.proPic}}" mode="widthFix"></image>
 
           <view class="product-name">

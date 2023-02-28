@@ -88,6 +88,16 @@ Page({
     }
 
   },
+  // 处理轮播下面的页面跳转
+  handleTypeJump(e) {
+    // 修改全局参数
+    const app = getApp()
+    app.globalData.index = e.currentTarget.dataset.index
+    // 跳转页面
+    wx.switchTab({
+      url: '/pages/category/index'
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
