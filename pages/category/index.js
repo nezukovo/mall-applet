@@ -29,7 +29,6 @@ Page({
   },
   // 获取swiper信息
   async getCategoriesList() {
-    console.log("getlist");
     const res = await requestUtil({
       url: "/bigType/findCategories"
     })
@@ -87,7 +86,10 @@ Page({
           scrollTop: 0, // 置顶
         })
 
-      },100)
+      },500)
+      /**
+       * TODO
+       */
 
     }
 

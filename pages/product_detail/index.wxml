@@ -1,0 +1,84 @@
+<view class="product-detail">
+  <!-- 轮播图 -->
+  <view class="swiper-box">
+    <swiper indicator-dots autoplay interval="3000" circular>
+      <swiper-item wx:for="{{product.productSwiperImageList}}" wx:for-item="item" wx:key="id">
+        <navigator>
+          <image mode="widthFix" src="{{baseUrl+'/image/productSwiperImgs/'+item.image}}">
+          </image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 商品详情tab栏 -->
+  <view class="product-info">
+    <view class="product-price">
+      ￥{{product.price}}
+    </view>
+    <view class="product-name">
+      {{product.name}}
+    </view>
+    
+    <view class="product-desc">
+      {{product.description}}
+    </view>
+  </view>
+  <view class="desc-tabs">
+   <view class="tabs-title">
+     <view class="title_item {{currentIndex == 0 ? 'active' : ''}}" data-index="0" bindtap="handleItemTitle">
+     商品介绍
+     </view>
+     <view class="title_item {{currentIndex==1 ? 'active' : ''}}" data-index="1" bindtap="handleItemTitle">
+     规格参数
+     </view>
+   </view>
+
+   <view class="tabs-content">
+     <block wx:if="{{currentIndex == 0}}">
+       <rich-text nodes="{{product.productIntroImgs.length !=0 ? product.productIntroImgs: 'null' }}"/>
+     </block>
+     <block wx:if="{{currentIndex == 1}}">
+       <rich-text nodes="{{product.productParaImgs.length !=0 ? product.productIntroImgs: 'null'}}"/>
+     </block>
+   </view>
+  </view>
+<!-- 下方工具按钮 -->
+  <view class="btn-tools">
+    <navigator url="/pages/index/index" open-type="switchTab" class="item">
+      <view class="iconfont icon-home">
+      
+      </view>
+      <view url="/pages/index/index">
+        首页
+      </view>
+    </navigator>
+    <view class="item">
+      <view class="iconfont icon-kefu">
+        
+      </view>
+      <view>
+        客服
+      </view>
+      <!-- 内置的打开对话框 -->
+      <button open-type="contact"></button>
+
+    </view>
+    <navigator url="/pages/cart/index" open-type="switchTab" class="item">
+      <view class="iconfont icon-cart">
+
+      </view>
+      <view>
+          购物车
+      </view>
+    </navigator>
+    <view class="btn">
+      <view class="add-cart">
+        加入购物车
+      </view>
+      <view class="buy-now">
+        立即购买
+      </view>
+    </view>
+
+  </view>
+</view>

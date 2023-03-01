@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3903972 */
-  src: url('//at.alicdn.com/t/c/font_3903972_q3a59bs0swd.woff2?t=1676793225768') format('woff2'),
-       url('//at.alicdn.com/t/c/font_3903972_q3a59bs0swd.woff?t=1676793225768') format('woff'),
-       url('//at.alicdn.com/t/c/font_3903972_q3a59bs0swd.ttf?t=1676793225768') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_3903972_uvgc998w3u.woff2?t=1677679033231') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3903972_uvgc998w3u.woff?t=1677679033231') format('woff'),
+       url('//at.alicdn.com/t/c/font_3903972_uvgc998w3u.ttf?t=1677679033231') format('truetype');
 }
 
 .iconfont {
@@ -13,90 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-gongdandating:before {
-  content: "\e601";
+.icon-cart:before {
+  content: "\e6af";
 }
 
-.icon-houtaishouye:before {
-  content: "\e602";
+.icon-home:before {
+  content: "\e6b8";
 }
 
-.icon-kaifapingtai:before {
-  content: "\e603";
-}
-
-.icon-qiyeguanli:before {
-  content: "\e604";
-}
-
-.icon-shenhezhongxin:before {
-  content: "\e605";
-}
-
-.icon-linggongguanli:before {
-  content: "\e606";
-}
-
-.icon-quanxianguanli:before {
-  content: "\e607";
-}
-
-.icon-jianguanfankui:before {
-  content: "\e608";
-}
-
-.icon-wanshuiguanli:before {
-  content: "\e609";
-}
-
-.icon-shenjiguanli:before {
-  content: "\e60a";
-}
-
-.icon-yewuguanli:before {
-  content: "\e60b";
-}
-
-.icon-yewufengongsiguanli:before {
-  content: "\e60c";
-}
-
-.icon-xitongguanli:before {
-  content: "\e60d";
-}
-
-.icon-yewukanban:before {
-  content: "\e60e";
-}
-
-.icon-yonghuguanli:before {
-  content: "\e60f";
-}
-
-.icon-xieyiguanli:before {
-  content: "\e610";
-}
-
-.icon-wodegongdan:before {
-  content: "\e611";
-}
-
-.icon-zonghefuwu:before {
-  content: "\e612";
-}
-
-.icon-shouye:before {
-  content: "\e613";
-}
-
-.icon-jiesuanguanli:before {
-  content: "\e614";
-}
-
-.icon-renwuguanli:before {
-  content: "\e615";
-}
-
-.icon-caiwuzhongxin:before {
-  content: "\e616";
+.icon-kefu:before {
+  content: "\e625";
 }

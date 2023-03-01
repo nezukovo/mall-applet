@@ -19,7 +19,7 @@
         </view>
         <!-- 二层循环需要嵌套进去 -->
         <view class="product-list" wx:for="{{item.productList}}" wx:for-item="product" wx:key="id">
-          <navigator url="">
+          <navigator url="/pages/product_detail/index?id={{product.id}}">
             <image src="{{baseUrl+'/image/product/'+product.proPic}}" mode="widthFix"></image>
 
             <view class="right">
